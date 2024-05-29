@@ -22,6 +22,11 @@ const Pretendard = localFont({
     }, {
       path: './Pretendard-Regular.subset.woff2',
       weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './Pretendard-Regular.otf',
+      weight: '400',
     },
     {
       path: './Pretendard-Light.subset.woff2',
@@ -36,6 +41,8 @@ const Pretendard = localFont({
       weight: '100',
     },
   ],
+  display: 'swap',
+  variable: '--font-pretendard',
 });
 
 export default Pretendard;

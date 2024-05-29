@@ -51,7 +51,7 @@ interface RowProps {
 }
 
 const AboutRow = ({ iconName, children }:RowProps) => (
-        <div className='font-semibold text-gray-600 font-pretendard flex items-center'
+        <div className='font-semibold text-gray-600 flex items-center'
              aria-label='profile-row' >
             <Icon name={iconName}
                   className='mr-6'

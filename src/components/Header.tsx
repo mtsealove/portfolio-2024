@@ -4,7 +4,6 @@ import useScrollColor from '@/hooks/useScrollColor';
 import Icon from '@/components/Icon';
 import { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { createPortal } from 'react-dom';
 
 const Header = () => {
   const pathname = usePathname();

@@ -12,6 +12,10 @@ module.exports = {
         3: '3',
         4: '4',
       },
+      fontFamily: {
+        Pretendard: 'var(--font-pretendard)',
+        serif: ['var(--font-pretendard)'],
+      },
     },
     fontFamily: {
       pretendard: ['Pretendard'],
