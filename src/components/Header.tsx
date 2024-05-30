@@ -5,7 +5,11 @@ import Icon from '@/components/Icon';
 import { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
-const Header = () => {
+interface Props {
+    className?: string;
+}
+
+const Header = ({ className }:Props) => {
   const pathname = usePathname();
   const [expand, setExpand] = useState<boolean>(false);
   const router = useRouter();
@@ -36,7 +40,8 @@ const Header = () => {
   const { isWhite, iconName } = useScrollColor();
 
   return (
-      <header className={`fixed left-0 top-0 z-10 sm:px-4 py-3 w-full transition duration-200 ${isWhite ? 'bg-white shadow-lg' : 'text-white'}`}>
+      <header className={`fixed left-0 top-0 z-10 sm:px-4 py-3 w-full transition duration-200 ${isWhite ? 'bg-white shadow-lg' : 'text-white'} ${className}`}
+              aria-label='global-header' >
           <nav className='max-w-screen-lg mx-auto flex justify-between items-center px-4 font-bold '>
               {pathname === '/' ? (
                   <span onClick={() => onClickLink()}

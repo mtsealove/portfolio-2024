@@ -13,7 +13,7 @@ function ProjectImageContainer({ images }:Props) {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setImages(images));
-  }, []);
+  }, [images]);
   return (
         <article className='grid grid-cols-3 lg:grid-cols-5 gap-4 mt-8'>
             {images.map((img, i) => (

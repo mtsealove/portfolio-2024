@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '@/styles/globals.scss';
 import RootProvider from '@/providers';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import Pretendard from './font/Pretendard';
 
 export const metadata: Metadata = {
@@ -31,10 +32,11 @@ export default function RootLayout({
       </head>
       <body className={Pretendard.variable}>
       <RootProvider>
-                <Header/>
-                {children}
-            </RootProvider>
-        </body>
+          <Header/>
+          {children}
+          <Footer/>
+      </RootProvider>
+      </body>
       </html>
   );
 }

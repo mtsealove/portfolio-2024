@@ -50,7 +50,7 @@ const CareerItem = ({ career }:Props) => {
           </div>
   );
   return (
-        <Card>
+        <Card aria-label='career-card'>
             <CardBody>
                 <CompanyInfo/>
                 <Date/>

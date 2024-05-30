@@ -38,6 +38,7 @@ async function ProjectPage({ params }:Props) {
                 </div>
                 <article dangerouslySetInnerHTML={{ __html: sanitizeHtml(description) }}
                          className={`text-gray-700 ${styles.contents}`}
+                         data-testid='project-contents'
                         />
                 <ProjectImageContainer images={images} />
                 <ImageModal/>

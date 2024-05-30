@@ -15,8 +15,8 @@ export function createProject(dto: CreateProjectDto): Promise<Project> {
   return instance.post('/projects', dto);
 }
 
-export function getProjects(): Promise<Project[]> {
-  return instance.get('/projects');
+export function getProjects() {
+  return instance.get<Project[]>('/projects');
 }
 
 export function getProject(id: number): Promise<Project> {

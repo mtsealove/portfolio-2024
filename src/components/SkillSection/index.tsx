@@ -7,8 +7,7 @@ import Icon from '@/components/Icon';
 function SkillSection() {
   return (
         <Container backgroundColor='bg-yellow-400'
-                   id='skills'
-        >
+                   id='skills' >
             <Title>Skills</Title>
             <article className='flex flex-col'>
                 {skills.map((skillSet) => (
@@ -29,7 +28,7 @@ function SkillSection() {
   );
 }
 
-function SkillItem({ skill }:{skill: Skill}) {
+export function SkillItem({ skill }:{skill: Skill}) {
   const { name, icon, exp } = skill;
   return (
         <div className='px-5 py-4 bg-white shadow-lg rounded-lg flex items-center'
