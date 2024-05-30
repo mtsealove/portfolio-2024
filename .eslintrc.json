@@ -46,5 +46,5 @@
       }
     }
   },
-  "ignorePatterns": [ "stories/" ]
+  "ignorePatterns": [ "stories/", "/src/__test__/" ]
 }
