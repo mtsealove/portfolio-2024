@@ -2,7 +2,7 @@
 
 import useScrollColor from '@/hooks/useScrollColor';
 import Icon from '@/components/Icon';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
 interface Props {
@@ -38,6 +38,9 @@ const Header = ({ className }:Props) => {
   };
 
   const { isWhite, iconName } = useScrollColor();
+  if (pathname.startsWith('/admin')) {
+    return <Fragment/>;
+  }
 
   return (
       <header className={`fixed left-0 top-0 z-10 sm:px-4 py-3 w-full transition duration-200 ${isWhite ? 'bg-white shadow-lg' : 'text-white'} ${className}`}

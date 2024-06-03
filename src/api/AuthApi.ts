@@ -14,6 +14,6 @@ export function setToken(token: string) {
   instance.defaults.headers.common.Authorization = `bearer ${token}`;
 }
 
-export function getMe(): Promise<AxiosResponse<User>> {
+export function getMe(): Promise<User> {
   return instance.get('/auth/me');
 }

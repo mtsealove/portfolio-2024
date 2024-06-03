@@ -1,0 +1,73 @@
+yarn add v1.22.19
+[1/4] Resolving packages...
+warning storybook > @storybook/cli > jscodeshift > temp > rimraf@2.6.3: Rimraf versions prior to v4 are no longer supported
+warning @storybook/nextjs > @storybook/builder-webpack5 > fork-ts-checker-webpack-plugin > memfs@3.6.0: this will be v4
+warning @storybook/nextjs > @storybook/builder-webpack5 > webpack-dev-middleware > memfs@3.6.0: this will be v4
+[2/4] Fetching packages...
+warning Pattern ["string-width@^4.1.0"] is trying to unpack in the same destination "/Users/isanhae/Library/Caches/Yarn/v6/npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity/node_modules/string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+warning sharp@0.33.4: The engine "libvips" appears to be invalid.
+warning @img/sharp-libvips-linux-arm64@1.0.2: The engine "pnpm" appears to be invalid.
+warning @img/sharp-libvips-linux-arm64@1.0.2: The engine "glibc" appears to be invalid.
+warning @img/sharp-libvips-linux-s390x@1.0.2: The engine "pnpm" appears to be invalid.
+warning @img/sharp-libvips-linux-s390x@1.0.2: The engine "glibc" appears to be invalid.
+warning @img/sharp-libvips-darwin-x64@1.0.2: The engine "pnpm" appears to be invalid.
+warning @img/sharp-libvips-darwin-x64@1.0.2: The engine "macos" appears to be invalid.
+warning @img/sharp-libvips-linux-x64@1.0.2: The engine "pnpm" appears to be invalid.
+warning @img/sharp-libvips-linux-x64@1.0.2: The engine "glibc" appears to be invalid.
+warning @img/sharp-libvips-linuxmusl-x64@1.0.2: The engine "pnpm" appears to be invalid.
+warning @img/sharp-libvips-linuxmusl-x64@1.0.2: The engine "musl" appears to be invalid.
+warning @img/sharp-darwin-arm64@0.33.4: The engine "pnpm" appears to be invalid.
+warning @img/sharp-darwin-arm64@0.33.4: The engine "glibc" appears to be invalid.
+warning @img/sharp-libvips-darwin-arm64@1.0.2: The engine "pnpm" appears to be invalid.
+warning @img/sharp-libvips-darwin-arm64@1.0.2: The engine "macos" appears to be invalid.
+warning @img/sharp-linuxmusl-arm64@0.33.4: The engine "pnpm" appears to be invalid.
+warning @img/sharp-linuxmusl-arm64@0.33.4: The engine "musl" appears to be invalid.
+warning @img/sharp-darwin-x64@0.33.4: The engine "pnpm" appears to be invalid.
+warning @img/sharp-darwin-x64@0.33.4: The engine "glibc" appears to be invalid.
+warning @img/sharp-libvips-linuxmusl-arm64@1.0.2: The engine "pnpm" appears to be invalid.
+warning @img/sharp-libvips-linuxmusl-arm64@1.0.2: The engine "musl" appears to be invalid.
+warning @img/sharp-libvips-linux-arm@1.0.2: The engine "pnpm" appears to be invalid.
+warning @img/sharp-libvips-linux-arm@1.0.2: The engine "glibc" appears to be invalid.
+warning @img/sharp-win32-ia32@0.33.4: The engine "pnpm" appears to be invalid.
+warning @img/sharp-linux-arm@0.33.4: The engine "pnpm" appears to be invalid.
+warning @img/sharp-linux-arm@0.33.4: The engine "glibc" appears to be invalid.
+warning @img/sharp-wasm32@0.33.4: The engine "pnpm" appears to be invalid.
+warning @img/sharp-linux-arm64@0.33.4: The engine "pnpm" appears to be invalid.
+warning @img/sharp-linux-arm64@0.33.4: The engine "glibc" appears to be invalid.
+warning @img/sharp-linux-x64@0.33.4: The engine "pnpm" appears to be invalid.
+warning @img/sharp-linux-x64@0.33.4: The engine "glibc" appears to be invalid.
+warning @img/sharp-linux-s390x@0.33.4: The engine "pnpm" appears to be invalid.
+warning @img/sharp-linux-s390x@0.33.4: The engine "glibc" appears to be invalid.
+warning @img/sharp-win32-x64@0.33.4: The engine "pnpm" appears to be invalid.
+warning @img/sharp-linuxmusl-x64@0.33.4: The engine "pnpm" appears to be invalid.
+warning @img/sharp-linuxmusl-x64@0.33.4: The engine "musl" appears to be invalid.
+[3/4] Linking dependencies...
+warning " > react-type-animation@3.2.0" has unmet peer dependency "prop-types@^15.5.4".
+warning "next-pwa > babel-loader@8.3.0" has unmet peer dependency "@babel/core@^7.0.0".
+warning "next-pwa > babel-loader@8.3.0" has unmet peer dependency "webpack@>=2".
+warning "next-pwa > clean-webpack-plugin@4.0.0" has unmet peer dependency "webpack@>=4.0.0 <6.0.0".
+warning "next-pwa > terser-webpack-plugin@5.3.10" has unmet peer dependency "webpack@^5.1.0".
+warning "next-pwa > workbox-webpack-plugin@6.6.1" has unmet peer dependency "webpack@^4.4.0 || ^5.9.0".
+warning "@storybook/nextjs > babel-loader@9.1.3" has unmet peer dependency "webpack@>=5".
+warning "@storybook/nextjs > @pmmmwh/react-refresh-webpack-plugin@0.5.13" has unmet peer dependency "webpack@>=4.43.0 <6.0.0".
+warning "@storybook/nextjs > sass-loader@12.6.0" has unmet peer dependency "webpack@^5.0.0".
+warning "@storybook/nextjs > style-loader@3.3.4" has unmet peer dependency "webpack@^5.0.0".
+warning "@storybook/nextjs > node-polyfill-webpack-plugin@2.0.1" has unmet peer dependency "webpack@>=5".
+[4/4] Building fresh packages...
+error An unexpected error occurred: "/Users/isanhae/Projects/portfolio/2023/portfolio-2024/node_modules/esbuild: Cannot find module 'pnpapi'
+Require stack:
+- /Users/isanhae/.cache/node/corepack/yarn/1.22.19/lib/cli.js
+- /Users/isanhae/.cache/node/corepack/yarn/1.22.19/bin/yarn.js
+Require stack:
+- /Users/isanhae/.cache/node/corepack/yarn/1.22.19/lib/cli.js
+- /Users/isanhae/.cache/node/corepack/yarn/1.22.19/bin/yarn.js".
+info If you think this is a bug, please open a bug report with the information provided in "/Users/isanhae/Projects/portfolio/2023/portfolio-2024/yarn-error.log".
+info Visit https://yarnpkg.com/en/docs/cli/add for documentation about this command.
+warning Error running install script for optional dependency: "/Users/isanhae/Projects/portfolio/2023/portfolio-2024/node_modules/sharp: Cannot find module 'pnpapi'
+Require stack:
+- /Users/isanhae/.cache/node/corepack/yarn/1.22.19/lib/cli.js
+- /Users/isanhae/.cache/node/corepack/yarn/1.22.19/bin/yarn.js
+Require stack:
+- /Users/isanhae/.cache/node/corepack/yarn/1.22.19/lib/cli.js
+- /Users/isanhae/.cache/node/corepack/yarn/1.22.19/bin/yarn.js"
+info This module is OPTIONAL, you can safely ignore this error

@@ -1,4 +1,4 @@
-import { Project } from '@/models/project';
+import { Project, ProjectDetail } from '@/models/project';
 import instance from './instance';
 
 export interface CreateProjectDto {
@@ -11,7 +11,7 @@ export interface CreateProjectDto {
     images: string[];
 }
 
-export function createProject(dto: CreateProjectDto): Promise<Project> {
+export function createProject(dto: CreateProjectDto): Promise<ProjectDetail> {
   return instance.post('/projects', dto);
 }
 
@@ -19,10 +19,10 @@ export function getProjects() {
   return instance.get<Project[]>('/projects');
 }
 
-export function getProject(id: number): Promise<Project> {
+export function getProject(id: number): Promise<ProjectDetail> {
   return instance.get(`/projects/${id}`);
 }
 
-export function updateProject(id: number, dto: CreateProjectDto): Promise<Project> {
+export function updateProject(id: number, dto: CreateProjectDto): Promise<ProjectDetail> {
   return instance.patch(`/projects/${id}`, dto);
 }

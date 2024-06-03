@@ -1,6 +1,6 @@
-import { Project } from '@/models/project';
+import {Project, ProjectDetail} from '@/models/project';
 
-export const mockProject: Project = {
+export const mockProject: ProjectDetail = {
   id: 1,
   description: '<div><script data-testid="xxs">window.alert("injection")</script>test project description</div>',
   endAt: new Date(),
@@ -11,4 +11,4 @@ export const mockProject: Project = {
   title: 'test project title',
 };
 
-export const mockProjects: Project[] = [mockProject, { ...mockProject, id: 2 }, { ...mockProject, id: 3 }];
+export const mockProjects: ProjectDetail[] = [mockProject, { ...mockProject, id: 2 }, { ...mockProject, id: 3 }];

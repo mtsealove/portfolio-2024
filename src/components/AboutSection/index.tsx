@@ -13,6 +13,8 @@ function AboutSection() {
             <article className='flex gap-y-10 gap-x-10 flex-col lg:flex-row items-center'>
                 <Image src={ProfileImg}
                        className='w-80 aspect-square object-cover object-center overflow-hidden rounded-full'
+                       priority
+                       placeholder='blur'
                        alt='' />
                 <Card className='w-full'>
                     <CardBody>

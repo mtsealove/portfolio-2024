@@ -14,6 +14,7 @@ const ProjectImage = ({ img, index }:Props) => {
                alt={img}
                width={200}
                height={200}
+               quality={65}
                aria-label='project-image'
                className='aspect-square object-cover bg-white shadow-lg rounded cursor-pointer border transition duration-200 ease-in-out transform hover:-translate-y-2'
                onClick={() => dispatch(showImage({ currentNumber: index }))}

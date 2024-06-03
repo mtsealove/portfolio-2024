@@ -39,6 +39,7 @@ const Landing = () => {
             <Image src={ArrowDown}
                    className={styles.arrow}
                    onClick={scrollDown}
+                   priority
                    alt='내려가기' />
         </section>
   );

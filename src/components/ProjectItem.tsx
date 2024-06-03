@@ -12,7 +12,7 @@ interface Props {
 
 const ProjectItem = ({ project }:Props) => {
   const {
-    title, description, thumbnail, summary,
+    title, thumbnail, summary,
   } = project;
   const [isHovered, setIsHover] = useState(false);
   const blurClass = useMemo(() => (
@@ -28,6 +28,7 @@ const ProjectItem = ({ project }:Props) => {
                     <Image src={thumbnail}
                            width={400}
                            height={300}
+                           quality={70}
                            className='object-cover object-center aspect-4/3 w-full'
                            alt={title}/>
                     <div className={blurClass}>

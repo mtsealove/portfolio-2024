@@ -3,6 +3,9 @@ export interface Project {
     title: string;
     thumbnail: string;
     summary: string;
+}
+
+export interface ProjectDetail extends Project {
     startAt: Date;
     endAt: Date;
     description: string;
