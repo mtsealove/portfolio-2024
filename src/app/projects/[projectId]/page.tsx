@@ -2,6 +2,7 @@ import { getProject } from '@/api/ProjectApi';
 import Image from 'next/image';
 import DOMPurify from 'dompurify';
 import { JSDOM } from 'jsdom';
+import { cache } from 'react';
 import ProjectImageContainer from '@/components/ProjectImageContainer';
 import ImageModal from '@/components/ImageModal';
 import dayjs from 'dayjs';
@@ -16,8 +17,11 @@ interface Props {
 
 const sanitizeHtml = (html: string): string => DOMPurify(new JSDOM('<!DOCTYPE html>').window).sanitize(html);
 
+const cachedGetProject = cache(async (id: number) => getProject(id));
+
 async function ProjectPage({ params }:Props) {
-  const project = await getProject(params.projectId);
+  const { projectId } = params;
+  const project = await cachedGetProject(projectId);
   const {
     title, summary, thumbnail, description,
     images, startAt, endAt,
@@ -62,7 +66,7 @@ async function ProjectPage({ params }:Props) {
 
 export async function generateMetadata({ params }:Props): Promise<Metadata> {
   const { projectId } = params;
-  const project = await getProject(projectId);
+  const project = await cachedGetProject(projectId);
   const { title, thumbnail, summary } = project;
   return {
     title: `포트폴리오 - ${title}`,
