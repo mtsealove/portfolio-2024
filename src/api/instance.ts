@@ -10,5 +10,15 @@ const instance: HttpClient = axios.create({
 });
 
 instance.interceptors.response.use((res) => res.data);
+// 세션 스토리지로 로그인 유지
+instance.interceptors.request.use((config) => {
+  if (typeof window !== 'undefined') {
+    const accessToken = window.sessionStorage.getItem('accessToken');
+    if (accessToken) {
+      config.headers.Authorization = `bearer ${accessToken}`;
+    }
+  }
+  return config;
+});
 
 export default instance;

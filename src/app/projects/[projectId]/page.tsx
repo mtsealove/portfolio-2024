@@ -1,4 +1,4 @@
-import { getProject } from '@/api/ProjectApi';
+import { getProject, getProjects } from '@/api/ProjectApi';
 import Image from 'next/image';
 import DOMPurify from 'dompurify';
 import { JSDOM } from 'jsdom';
@@ -62,6 +62,12 @@ async function ProjectPage({ params }:Props) {
             </section>
         </div>
   );
+}
+
+export async function generateStaticParams() {
+  const projects = await getProjects();
+  console.log(projects);
+  return projects.map((p) => ({ slug: p.id }));
 }
 
 export async function generateMetadata({ params }:Props): Promise<Metadata> {

@@ -9,7 +9,7 @@ const Button = (props: Props) => {
     fullWidth, children, className, ...rest
   } = props;
   return (
-      <button className={`py-2 bg-violet-700 text-white font-semibold rounded-lg ${className}`}>
+      <button className={`py-2 px-4 bg-violet-700 text-white font-semibold rounded-lg ${className}`}>
           {children}
       </button>
   );

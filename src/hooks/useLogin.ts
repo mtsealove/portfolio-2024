@@ -1,22 +1,36 @@
-import { cookies } from 'next/headers';
 import { useEffect } from 'react';
-import { setToken, signIn, getMe } from '@/api/AuthApi';
-import { useDispatch } from 'react-redux';
+import {
+  getMe, refreshSignIn,
+} from '@/api/AuthApi';
+import { useDispatch, useSelector } from 'react-redux';
 import { login } from '@/reducers/user';
+import { getCookie } from 'cookies-next';
+import { RootState } from '@/reducers';
 
 function useLogin() {
+  const user = useSelector((state: RootState) => state.user.user);
   const dispatch = useDispatch();
-  useEffect(() => {
-    const cookieStore = cookies();
-    const accessToken = cookieStore.get('accessToken');
-    // accessToken?.value;
-    if (accessToken?.value) {
-      setToken(accessToken.value);
-      getMe().then((user) => {
-        dispatch(login(user));
-      });
+  const refreshLogin = () => {
+    const refreshToken = getCookie('refreshToken');
+    if (refreshToken) {
+      refreshSignIn(refreshToken)
+        .then((data) => {
+          const { accessToken } = data;
+          window.sessionStorage.setItem('accessToken', accessToken);
+          getMe().then((userData) => {
+            dispatch(login(userData));
+          });
+        });
     }
+  };
+  useEffect(() => {
+    getMe().then((data) => {
+      dispatch(login(data));
+    }).catch(() => {
+      refreshLogin();
+    });
   }, []);
+  return user;
 }
 
 export default useLogin;

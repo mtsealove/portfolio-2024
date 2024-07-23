@@ -7,10 +7,13 @@ import FormInput from '@/components/FormInput';
 import Button from '@/components/Button';
 import { useMutation } from '@tanstack/react-query';
 import {
-  getMe, ResSignIn, setToken, signIn,
+  getMe, ResSignIn, signIn,
 } from '@/api/AuthApi';
 import { useDispatch } from 'react-redux';
 import { login } from '@/reducers/user';
+import { setCookie } from 'cookies-next';
+import dayjs from 'dayjs';
+import useLogin from '@/hooks/useLogin';
 
 export interface IForm {
     email: string;
@@ -22,8 +25,12 @@ const AuthPage = () => {
   const dispatch = useDispatch();
   const onSuccess = async (data: ResSignIn) => {
     window.alert('success');
-    const { accessToken } = data;
-    setToken(accessToken);
+    const { accessToken, refreshToken } = data;
+    window.sessionStorage.setItem('accessToken', accessToken);
+    setCookie('refreshToken', refreshToken, {
+      expires: dayjs().add(30, 'days').toDate(),
+    });
+    // const cookie = bn
     const user = await getMe();
     dispatch(login(user));
   };
@@ -35,6 +42,7 @@ const AuthPage = () => {
       window.alert('오류가 발생하였습니다.');
     },
   });
+  useLogin();
   return (
       <main className='pt-10 min-h-dvh flex flex-col justify-center items-center bg-slate-100'>
           <Card className='min-w-80'>
