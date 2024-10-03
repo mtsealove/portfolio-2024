@@ -1,4 +1,5 @@
 import { Project, ProjectDetail } from '@/models/project';
+import axios from 'axios';
 import instance from './instance';
 
 export interface CreateProjectDto {

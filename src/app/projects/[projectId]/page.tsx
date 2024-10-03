@@ -66,7 +66,6 @@ async function ProjectPage({ params }:Props) {
 
 export async function generateStaticParams() {
   const projects = await getProjects();
-  console.log(projects);
   return projects.map((p) => ({ slug: p.id }));
 }
 
